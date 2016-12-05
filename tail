@@ -1,0 +1,18 @@
+% On n'allume pas...
+\foreach \i in {0, 1, ..., \x} {
+  \foreach \j in {0, 1, ..., \y} {
+    \filldraw [fill=white, draw=black] ({\i + \e}, {\j + \e})
+      -- ({\i + \e}, {\j + 1 - \e})
+      -- ({\i + 1 - \e}, {\j + 1 - \e})
+      -- ({\i + 1 - \e}, {\j + \e})
+      -- cycle;
+  }}
+
+% ... on éteind les noclicks
+\foreach \i / \j in \clicks {
+  \filldraw [fill=color2, draw=black] ({\i + \e}, {\j + \e})
+    -- ({\i + \e}, {\j + 1 - \e})
+    -- ({\i + 1 - \e}, {\j + 1 - \e})
+    -- ({\i + 1 - \e}, {\j + \e})
+    -- cycle;
+}

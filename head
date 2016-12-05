@@ -1,0 +1,16 @@
+\def\e{0.2}
+\def\half{0.5}
+
+% Grille
+\pgfmathparse{\x-1}\let\xgrid\pgfmathresult
+\pgfmathparse{\y-1}\let\ygrid\pgfmathresult
+
+\foreach \i in {0, 1, ..., \xgrid} {
+  \foreach \j in {0, 1, ..., \y} {
+    \draw ({\i + 1 - \e}, {\j + \half}) -- ({\i + 1 + \e}, {\j + \half});
+}}
+
+\foreach \j in {0, 1, ..., \ygrid} {
+  \foreach \i in {0, 1, ..., \x} {
+    \draw ({\i + \half}, {\j + 1 - \e}) -- ({\i + \half}, {\j + 1 + \e});
+}}
