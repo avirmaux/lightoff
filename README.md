@@ -1,5 +1,5 @@
 # lightoff
-Solve rectangular lightoff probms, output in TikZ
+Solve rectangular lightoff problem, output in TikZ
 
 ![50x50](lightoff_50_50.png)
 
